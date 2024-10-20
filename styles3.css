@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #121212;
+    font-family: "poppins", sans-serif;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+@keyframes slideToTop {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideToLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.card {
+    background-color: #1c1c1c;
+    width: 800px;
+    border-radius: 20px;
+    padding: 15px 30px;
+    display: flex;
+    gap: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 1s ease-out;
+}
+
+.profile {
+    flex: 1;
+    background-color: white;
+    border-radius: 20px;
+    text-align: center;
+    position: relative;
+    top: 120px;
+    padding: 40px 20px 0px 20px;
+    margin-right: 20px;
+    animation: slideToTop 1s ease-out;
+    height: 270px;
+    width: 200px;
+}
+
+.profile-img-container {
+    position: absolute;
+    top: -70px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid #ff6600;
+    overflow: hidden;
+    background-color: white;
+}
+
+.profile-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile h2 {
+    color: #ff6600;
+    margin: 60px 0 10px;
+}
+
+.profile p {
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-icons img {
+    width: 80px;
+    height: 80px;
+    filter: invert(0.8);
+}
+
+.details {
+    flex: 2;
+    padding: 20px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    animation: slideToLeft 1s ease-out;
+}
+
+.details p, .details ul {
+    margin: 10px 0;
+    font-size: 1.1em;
+}
+
+.details strong {
+    color: #ff6600;
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    padding-left: 20px;
+}
+
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.socials {
+    width: fit-content;
+    height: fit-content;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px 25px;
+    gap: 20px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.055);
+  }
+
+  .socialContainer {
+    width: 42px;
+    height: 42px;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition-duration: .3s;
+    border-radius: 25%;
+  }
+  /* instagram*/
+  .containerOne:hover {
+    background-color: #ff8c00;
+    transition-duration: .3s;
+    fill: #fff;
+  }
+  /* twitter*/
+  .containerTwo:hover {
+    background-color: #ff8c00;
+    transition-duration: .3s;
+    fill: #fff;
+
+  }
+  /* linkdin*/
+  .containerThree:hover {
+    background-color: #ff8c00;
+    transition-duration: .3s;
+    fill: #fff;
+
+  }
+  /* Whatsapp*/
+  .containerFour:hover {
+    background-color: #ff8c00;
+    transition-duration: .3s;
+    fill: #fff;
+
+  }
+  
+  .socialContainer:active {
+    transform: scale(0.9);
+    transition-duration: .3s;
+  }
+  
+  .socialSvg {
+    width: 17px;
+  }
+  
+  
+  .socialSvg path {
+    fill: #fff;
+  }
+
+  
+  .socialContainer:hover .socialSvg {
+    animation: slide-in-top 0.3s both;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .card {
+        width: 100%;
+        max-width: 600px;
+        height: 100vh;
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .profile {
+        margin-right: 0;
+        margin-bottom: 20px;
+        padding: 40px 20px 20px 20px;
+    }
+
+    .profile-img-container {
+        width: 80px;
+        height: 80px;
+        top: -40px;
+    }
+
+    .profile h2 {
+        margin: 50px 0 10px;
+        font-size: 1.5em;
+    }
+
+    .profile p {
+        font-size: 1em;
+    }
+
+    .social-icons img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .details {
+        padding: 0 10px;
+        position: relative;
+        top: 8dvh;
+    }
+
+    .details p, .details ul {
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .card{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .profile h2 {
+        font-size: 1.3em;
+    }
+
+    .profile p {
+        font-size: 0.9em;
+    }
+
+    .details p, .details ul {
+        font-size: 0.9em;
+    }
+
+    .social-icons img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .profile-img-container {
+        width: 60px;
+        height: 60px;
+        top: -30px;
+    }
+}

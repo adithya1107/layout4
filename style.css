@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Mukta', sans-serif;
+    background-color: #000000;
+    line-height: 1.6;
+}
+
+header {
+    text-align: center;
+    margin: 20px 0;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #fff;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.card {
+    background-color: #000;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(252, 252, 252, 0.476);
+    overflow: hidden;
+    width: 200px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.card img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+}
+
+.card h2 {
+    font-size: 1.5rem;
+    color: #e1e0e0;
+    margin: 10px 0;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #d4d3d3;
+    margin-bottom: 10px;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: -10px 0px 70px 1px rgba(0, 255, 117, 0.30);
+}
+
+@media (max-width: 1200px) {
+    .card-container {
+        justify-content: space-evenly;
+    }
+
+    .card {
+        width: 180px;
+    }
+}
+
+@media (max-width: 768px) {
+    .card-container {
+        justify-content: center;
+    }
+
+    .card {
+        width: 160px;
+    }
+    img{
+        background-size: cover;
+    }
+}
+
+@media (max-width: 576px) {
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+    img{
+        background-size: cover;
+    }
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.details img {
+    width: 300px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.details p {
+    font-size: 1.2rem;
+    color: #555;
+    max-width: 800px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .details img {
+        width: 250px;
+    }
+
+    .details p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .details img {
+        width: 200px;
+    }
+
+    .details p {
+        font-size: 0.9rem;
+    }
+}
